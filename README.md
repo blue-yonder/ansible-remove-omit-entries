@@ -1,5 +1,7 @@
 # Ansible Role: remove-omit-entries
 
+[![Build Status](https://travis-ci.org/blue-yonder/ansible-remove-omit-entries.svg?branch=master)](https://travis-ci.org/blue-yonder/ansible-remove-omit-entries)
+
 In a nutshell, this role gives you behavior similar to Ansible's `omit`,
 but for dictionaries and lists instead of modules' parameters.
 
