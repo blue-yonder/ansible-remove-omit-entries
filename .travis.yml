@@ -15,3 +15,6 @@ script:
   - python -m doctest filter_plugins/remove_omit_entries.py -v
   - ansible-playbook tests/test_remove_omit_entries.yml -i tests/inventory --syntax-check
   - ansible-playbook tests/test_remove_omit_entries.yml -i tests/inventory --check
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
