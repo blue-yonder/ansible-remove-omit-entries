@@ -3,7 +3,7 @@
   connection: local
 
   roles:
-    - role: remove_omit_entries
+    - role: remove-omit-entries
       
   vars:
     dict1:
