@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Julius Neuffer
+  description: Omit for dictionary and list entries.
+  company: Blue Yonder
+  license: MIT
+  min_ansible_version: 2.3
+  galaxy_tags:
+    - utilities
+    - utility
+    - helper
+    - remove
+    - variables
+    - filter
+    - omit
+
+dependencies: []

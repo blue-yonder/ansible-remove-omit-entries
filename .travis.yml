@@ -1,0 +1,17 @@
+---
+language: python
+python:
+  - "2.7"
+  - "3.6"
+
+sudo: false
+
+install:
+  - pip install ansible
+  - ansible --version
+  - printf '[defaults]\nroles_path=../' > ansible.cfg
+
+script:
+  - python -m doctest filter_plugins/remove_omit_entries.py -v
+  - ansible-playbook tests/test_remove_omit_entries.yml -i tests/inventory --syntax-check
+  - ansible-playbook tests/test_remove_omit_entries.yml -i tests/inventory --check

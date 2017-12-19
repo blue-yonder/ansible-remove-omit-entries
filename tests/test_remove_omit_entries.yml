@@ -1,0 +1,32 @@
+---
+- hosts: localhost
+  connection: local
+
+  roles:
+    - role: remove_omit_entries
+      
+  vars:
+    dict1:
+      key1: 'some value'
+      key2: "{{ remove_omit_entries_marker }}"
+
+    dict2:
+      key1:
+        key11: "{{ remove_omit_entries_marker }}"
+
+    dict2_cleaned: "{{ dict2|remove_omit_entries }}"
+            
+    list1:
+      - "{{ remove_omit_entries_marker }}"
+      - 'something'
+
+    list2:
+      - key1: "{{ remove_omit_entries_marker }}"
+              
+  tasks:
+    - assert:
+        that:
+          - "'key2' not in dict1|remove_omit_entries"
+          - "'key11' not in dict2_cleaned.key1"
+          - "list1|remove_omit_entries == ['something']"
+          - "list2|remove_omit_entries == [{}]"

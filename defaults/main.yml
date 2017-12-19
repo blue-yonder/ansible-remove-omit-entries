@@ -1,0 +1,2 @@
+---
+remove_omit_entries_marker: "{{ None|remove_omit_entries_get_marker }}"
