@@ -3,7 +3,7 @@
   connection: local
 
   roles:
-    - role: remove-omit-entries
+    - role: ansible-remove-omit-entries
       
   vars:
     dict1:
