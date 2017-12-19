@@ -5,6 +5,10 @@ galaxy_info:
   company: Blue Yonder
   license: MIT
   min_ansible_version: 2.3
+  platforms:
+    - name: Debian
+      versions:
+        - all
   galaxy_tags:
     - utilities
     - utility
